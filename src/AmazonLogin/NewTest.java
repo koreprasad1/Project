@@ -13,7 +13,6 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.apache.poi.hssf.usermodel.*;
@@ -25,41 +24,14 @@ public class NewTest {
 	public static String username;
 	public static String password;
 	public static Actions actions;
-	public static String readXL;
-	
-	public static String readXL(int row, String column, String strFilePath) throws IOException
-	{
-		
-		File file =    new File("C:\\Users\\salun\\eclipse-workspace\\GroupActivity\\Data\\Search_List.xls");
-		FileInputStream inputStream = new FileInputStream(file);
-		HSSFWorkbook wb=new HSSFWorkbook(inputStream);
-		HSSFSheet sheet=wb.getSheet("location");
-		HSSFRow row1=sheet.getRow(1);
-				
-		/*int rowCount=sheet.getLastRowNum()-sheet.getFirstRowNum();
-        System.out.println(rowCount);
-        
-        for(int i=0;i<=rowCount;i++){
-            
-            //get cell count in a row
-            int cellcount=sheet.getRow(i).getLastCellNum();
-            System.out.println(cellcount);
-            //iterate over each cell to print its value
-            System.out.println("Row"+ i+" data is :");
-            
-            for(int j=0;j<cellcount;j++){
-                System.out.print(sheet.getRow(i).getCell(j).getStringCellValue() +"");
-            }
-            System.out.println();
-            */
-       
-	System.out.print(sheet.getRow(1));
-        return null;
-	}
+	public static String readXL1;
 		
 	
   @Test
+ 
   public void Login_Details() {
+
+		
 
 	 	actions.moveToElement(driver.findElement(By.id("nav-link-accountList-nav-line-1"))).perform();
 	  	driver.findElement(By.cssSelector("div[id='nav-flyout-ya-signin'] span[class='nav-action-inner']")).click();
