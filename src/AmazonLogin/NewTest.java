@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.apache.poi.hssf.usermodel.*;
-
+import AmazonLogin.ExcelData;
 public class NewTest {
 	public static WebDriver driver;
 	public static Properties prop;
@@ -28,23 +28,24 @@ public class NewTest {
 		
 	
   @Test
- 
-  public void Login_Details() {
 
-		
-
+  public void Login_Details() throws IOException 
+  	{
+	  
 	 	actions.moveToElement(driver.findElement(By.id("nav-link-accountList-nav-line-1"))).perform();
 	  	driver.findElement(By.cssSelector("div[id='nav-flyout-ya-signin'] span[class='nav-action-inner']")).click();
 		driver.findElement(By.name("email")).sendKeys(username);
 		driver.findElement(By.id("continue")).click();
 		driver.findElement(By.name("password")).sendKeys(password);
-		driver.findElement(By.cssSelector("#signInSubmit")).click();
+		driver.findElement(By.cssSelector("#signInSubmit")).click();	
+		String[][] data = ExcelData.readXL1();
+		//driver.findElement(By.id("twotabsearchtextbox")).sendKeys());
+		//driver.findElement(By.id("nav-search-submit-button")).click();
 		
-		
-		
-		
-  }
-  @BeforeTest
+  	}
+  
+
+@BeforeTest
   public void beforeTest() throws FileNotFoundException, IOException {
 	  try {
 		  prop = new Properties();
