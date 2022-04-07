@@ -36,21 +36,53 @@ public class NewTest {
 		driver.findElement(By.name("email")).sendKeys(username);
 		driver.findElement(By.id("continue")).click();
 		driver.findElement(By.name("password")).sendKeys(password);
-		driver.findElement(By.cssSelector("#signInSubmit")).click();	
+		driver.findElement(By.cssSelector("#signInSubmit")).click();
+		System.out.println("Logged IN Succesfully");
 		String[] data = ExcelData.readXL1();
-		System.out.println(data[1]);
+		System.out.println('\n'+"Search Results for "+ data[1]);
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys(data[1]);
 		driver.findElement(By.id("nav-search-submit-button")).click();
-		
-		/*driver.findElement(By.id("twotabsearchtextbox")).sendKeys(data[2]);
+		String Search11 = driver.findElement(By.xpath("//div[@class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1']//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2']//span[1]")).getText();
+		System.out.println('\n'+Search11);
+		String Search12 = driver.findElement(By.xpath("//div[@class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_2']//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2']//span[1]")).getText();
+		System.out.println('\n'+Search12);
+		String Search13 = driver.findElement(By.xpath("//div[@class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_3']//div[@class='a-section a-spacing-none s-padding-right-small s-title-instructions-style']//span[1]")).getText();
+		System.out.println('\n'+Search13);
+		String Search14 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_4'] span[class='a-size-medium a-color-base a-text-normal']")).getText();
+		System.out.println('\n'+Search14);
+		String Search15 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_5'] span[class='a-size-medium a-color-base a-text-normal']")).getText();
+		System.out.println('\n'+Search15);
+		driver.findElement(By.id("twotabsearchtextbox")).clear();
+		System.out.println('\n'+"Search Results for "+ data[2]);
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys(data[2]);
 		driver.findElement(By.id("nav-search-submit-button")).click();
-		driver.findElement(By.id("nav-search-submit-button")).clear();
+		String Search21 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1'] span[class='a-size-medium a-color-base a-text-normal']")).getText();
+		System.out.println('\n'+Search21);
+		String Search22 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_2'] h2[class='a-size-mini a-spacing-none a-color-base s-line-clamp-2'] span:nth-child(1)")).getText();
+		System.out.println('\n'+Search22);
+		String Search23 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_3'] div[class='a-section a-spacing-none s-padding-right-small s-title-instructions-style'] span:nth-child(1)")).getText();
+		System.out.println('\n'+Search23);
+		String Search24 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_4'] span[class='a-size-medium a-color-base a-text-normal']")).getText();
+		System.out.println('\n'+Search24);
+		String Search25 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_5'] div[class='a-section a-spacing-none s-padding-right-small s-title-instructions-style'] span:nth-child(1)")).getText();
+		System.out.println('\n'+Search25);
+		driver.findElement(By.id("twotabsearchtextbox")).clear();
+		System.out.println('\n'+"Search Results for "+ data[3]);
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys(data[3]);
 		driver.findElement(By.id("nav-search-submit-button")).click();
-		driver.findElement(By.id("nav-search-submit-button")).clear();*/
+		String Search31 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1'] span[class='a-size-medium a-color-base a-text-normal']")).getText();
+		System.out.println('\n'+Search31);
+		String Search32 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_2'] span[class='a-size-medium a-color-base a-text-normal']")).getText();
+		System.out.println('\n'+Search32);
+		String Search33 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_3'] span[class='a-size-medium a-color-base a-text-normal']")).getText();
+		System.out.println('\n'+Search33);
+		String Search34 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_4'] div[class='a-section a-spacing-none s-padding-right-small s-title-instructions-style'] span:nth-child(1)")).getText();
+		System.out.println('\n'+Search34);
+		String Search35 = driver.findElement(By.cssSelector("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_5'] span[class='a-size-medium a-color-base a-text-normal']")).getText();
+		System.out.println('\n'+Search35);
+		driver.findElement(By.id("twotabsearchtextbox")).clear();
   	}
   
-
 @BeforeTest
   public void beforeTest() throws FileNotFoundException, IOException {
 	  try {
@@ -74,6 +106,7 @@ public class NewTest {
 
   @AfterTest
   public void afterTest() {
+	  driver.quit();
 	 
   }
 

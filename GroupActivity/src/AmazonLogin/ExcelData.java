@@ -27,11 +27,11 @@ public class ExcelData {
 			int cellcount = sheet.getRow(i).getLastCellNum();
 			System.out.println(cellcount);
 			// iterate over each cell to print its value
-			System.out.println("Row " + i + " data is :");
+			System.out.println("Row " + i + " data is ");
 
 			for (int j = 0; j < cellcount; j++) {
 				data[i] = sheet.getRow(i).getCell(j).getStringCellValue();
-				System.out.print(sheet.getRow(i).getCell(j).getStringCellValue() + ",");
+				System.out.print(sheet.getRow(i).getCell(j).getStringCellValue() + ".");
 
 			}
 			System.out.println();
@@ -40,7 +40,7 @@ public class ExcelData {
 		for (int i = 1; i < data.length; i++)
 			System.out.println("Search Element is " + data[i]);
 		return data;
-		
+
 	}
 
 	public static void main(String[] args) throws IOException {
