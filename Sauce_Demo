@@ -1,0 +1,11 @@
+saucedemo-playwright/
+  .gitignore
+  package.json
+  tsconfig.json
+  playwright.config.ts
+  README.md
+  tests/
+    checkout.spec.ts
+  .github/
+    workflows/
+      ci.yml
